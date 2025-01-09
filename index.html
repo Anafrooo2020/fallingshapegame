@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falling Shapes Game</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      font-family: Arial, sans-serif;
+    }
+    #toolbar {
+      width: 33%;
+      padding: 10px;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    #gameCanvas {
+      width: 67%;
+      height: 100vh;
+      border-left: 1px solid black;
+    }
+    .toolbar-button {
+      margin: 5px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .panel{padding: 150px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-transform: uppercase;
+text-shadow: 3px 4px 5px 6px #4CAF50;}
+    .toolbar-button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <div class="flex-column">
+      <button class="toolbar-button" id="score">Score: 0</button>
+      <button class="toolbar-button" id="time">Time: 0</button>
+    </div>
+    <p class="panel">game panel</p>
+    <div class="flex-column">
+      <button class="toolbar-button" id="startGame">Start Game</button>
+      <button class="toolbar-button" id="finishGame" disabled>Finish Game</button>
+    </div>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+  
+  <script src="game.js"></script>
+</body>
+</html>
